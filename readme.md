@@ -3,40 +3,44 @@
 
 ### Description
 
-Automated a LinkedIn post, custom for the most trending events of the day.
+An Automated LinkedIn post generator was developed to create 
+custom content for the most trending events of the day.
 
-Trending Post Generator gets the `Top Google Searches` of the day,
-combine them with a prompt sent to Chat-GPT 
-to create the perfect LinkedIn post.
+The Trending Post Generator obtains the 'Top Google Searches' 
+for the day and combines them with prompts sent to 
+Chat-GPT to produce the ideal LinkedIn post.
 
-Effortless, fast and engaging.
+The entire process is effortless, fast, 
+and results in highly engaging content for the LinkedIn audience.
 
 
 ### How Does It Work?
 
-The App will first create a WebDriver instance with `Selenium` 
-to view Google's daily trends in:
-`https://trends.google.co.il/trends/trendingsearches/daily?geo=IL&hl=iw`
+The application employs a WebDriver instance with Selenium to 
+access Google's daily trends, 
+located at: https://trends.google.co.il/trends/trendingsearches/daily?geo=IL&hl=iw
 
-For each trend-item, it will check if the search_count 
-is bigger then the MIN_SERACH_COUNT 
-(defined in the `selenium_helper.py` file). 
+For each trend-item, 
+it verifies if the search_count exceeds the value defined as 
+MIN_SEARCH_COUNT (specified in the `selenium_helper.py` file).
 
-If so, it will go to the attached article and take the 
-content of that article,
-and save it in a dictionary of the trend-item, 
-inside a `search_results` List.
+If the condition is met, 
+the application proceeds to access the associated article, 
+extracts its content, 
+and stores it in a dictionary within a search_results List, 
+specifically linked to the respective trend-item.
 
-Then, the app will loop threw the search_results items
-define the prompt by combining a basic-query text
-(from the `base_linkedin_post_prompt.txt` file)
-with the article-content saved in the trend-item. 
+Next, 
+the application iterates through the search_results items 
+and creates prompts by combining a basic-query text from the 
+`base_linkedin_post_prompt.txt` file with the 
+saved article content corresponding to each trend-item.
 
-Finally, 
-it will send the built prompt to Chat-GPT, 
-using Openai API,
-and create a `.txt` file with the chat's answer in the 
-`linkedin-posts` directory.
+Subsequently, 
+the application sends the generated prompt to Chat-GPT, 
+utilizing the OpenAI API, 
+and saves the resulting conversation's answer in a .txt file 
+located in the `/linkedin-posts` directory.
 
 
 ### Instructions:
