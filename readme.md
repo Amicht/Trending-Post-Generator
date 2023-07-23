@@ -45,11 +45,24 @@ located in the `/linkedin-posts` directory.
 
 ### Instructions:
 
-**Openai Api Key (Required)**: 
+#### ENV Variables -
+Create a `.env` file.
 
-Create a `.env` file and save your secret key in 
+**Openai Api Key (Required)**: 
+save your secret key in
 `OPENAI_API_KEY` variable.
 
+**Linkedin Login Credentials (Required)**:
+save your email and password in
+`LINKEDIN_EMAIL` and `LINKEDIN_PASSWORD` variables.
+
+Your `.env` file should look like this:
+```commandline
+OPENAI_API_KEY=kfdgjlkvldnvkljfdkjdf
+
+LINKEDIN_EMAIL=mymail@gmail.com
+LINKEDIN_PASSWORD=secretpassword
+```
 
 **Change Prompt**: 
 
