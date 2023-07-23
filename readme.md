@@ -22,7 +22,7 @@ located at: https://trends.google.co.il/trends/trendingsearches/daily?geo=IL&hl=
 
 For each trend-item, 
 it verifies if the search_count exceeds the value defined as 
-MIN_SEARCH_COUNT (specified in the `selenium_helper.py` file).
+MIN_SEARCH_COUNT (specified in the `/helpers/selenium_helper.py` file).
 
 If the condition is met, 
 the application proceeds to access the associated article, 
@@ -61,7 +61,7 @@ inside the `base_linkedin_post_prompt.txt` file
 
 Set a different value to get a better results 
 by changing the `MIN_SERACH_COUNT` value
-in the `selenium_helper.py` file
+in the `/helpers/selenium_helper.py` file
 
 
   
